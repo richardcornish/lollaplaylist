@@ -21,10 +21,10 @@ Next I stumbled around in the [YouTube Data API documentation](https://developer
 Remember to register an app in the [Google Developers Console](https://console.developers.google.com/) as mentioned above.
 
 ```
-mkvirtualenv lollaplaylist
-git clone git@github.com:richardcornish/lollaplaylist.git
-cd lollaplaylist/
-pip install -r requirements.txt
-cd lollaplaylist/
-python youtube
+$ mkvirtualenv lollaplaylist
+(lollaplaylist)$ git clone git@github.com:richardcornish/lollaplaylist.git
+(lollaplaylist)$ cd lollaplaylist/
+(lollaplaylist)$ pip install -r requirements.txt
+(lollaplaylist)$ cd lollaplaylist/
+(lollaplaylist)$ python youtube
 ```
