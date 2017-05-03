@@ -1,5 +1,7 @@
 # Lollaplaylist
 
+[![Screenshot](https://raw.githubusercontent.com/richardcornish/lollaplaylist/master/docs/screenshot.png)](https://www.youtube.com/playlist?list=PLfFIa4m9ZTA1y0hHkU_U7Y6twjyuiiIyI)
+
 This repository contains the code to create a YouTube playlist containing the most popular video of each of the artists of the [Lollapalooza](https://www.lollapalooza.com/) 2017 lineup.
 
 I made this because I feel old and disconnected from today's youth what with their loud music and what not. Also, I'm lazy and sure as hell wasn't going to manually search for every band's popular song on YouTube.
