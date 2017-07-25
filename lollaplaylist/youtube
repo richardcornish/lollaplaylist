@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
+import csv
 import httplib2
-import json
 import os
 import sys
 
@@ -93,21 +93,22 @@ playlist_id = response['id']
 
 # Get videos
 
-lineup_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'lineup.json'))
+artists_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'artists.csv'))
 
 artists = []
-with open(lineup_file, 'r') as f:
-    lineup = json.load(f)
-    for key in lineup['Lineup']:
-        for artist in lineup['Lineup'][key]:
-            artists.append(artist)
+with open(artists_file, 'r') as f:
+    rows = csv.reader(f)
+    next(rows, None)
+    for row in rows:
+        artists.append({'name': row[0], 'channel': row[1]})
 
 video_ids = []
 for artist in artists:
     response = youtube.search().list(
         part='id',
-        q=artist,
+        q=artist['name'],
         type='video',
+        channelId=artist['channel'],
     ).execute()
     video_ids.append(response['items'][0]['id']['videoId'])
 
